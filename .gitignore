@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Front-end ###
+react-frontend/package-lock.json
+react-frontend/.eslintcache
+node_modules/
