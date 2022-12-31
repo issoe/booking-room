@@ -1,5 +1,4 @@
 # Integration project 1
------
 ## Getting Started
 Web app for booking room
 ## Installation
