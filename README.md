@@ -1,7 +1,6 @@
-# booking-room
+# Integration project 1
 ## Getting Started
-
-
+Web app for booking room
 ### Getting Started
 1. Database (MySQL)
       ```
