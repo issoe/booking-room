@@ -13,7 +13,7 @@ function LoginPage() {
             setAdmin(getdata);
         }
         getAdmin();
-    },[]);
+    }, []);
     
     return (
         <div className='LoginPage'>
