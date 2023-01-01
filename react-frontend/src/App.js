@@ -4,15 +4,13 @@ import CreatBooking from './component/CreatBooking';
 import LoginPage from './component/LoginPage';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' exact element={<LoginPage/>} /> 
-        <Route path='/creatbooking' exact element={<CreatBooking />} /> 
+        <Route path='/' exact element={<LoginPage />} />
+        <Route path='/creatbooking' exact element={<CreatBooking />} />
       </Routes>
     </Router>
   );
 }
-
-export default App;
