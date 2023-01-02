@@ -8,11 +8,11 @@ export default function LoginPage() {
     const [password, setPassword] = useState('')
     const navigate = useNavigate();
 
-    useEffect(() => {
-        axios.get('http://localhost:8082/admin')
-            .then((response) => console.log(response.status))
-            .catch((error) => console.log(error))
-    }, []);
+    // useEffect(() => {
+    //     axios.get('http://localhost:8082/admin')
+    //         .then((response) => console.log(response.status))
+    //         .catch((error) => console.log(error))
+    // }, []);
 
     const handleSubmit = () => {
         if (email == '' || password == '') console.log("Account or password is empty")
