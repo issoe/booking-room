@@ -1,0 +1,34 @@
+.CompactCard {
+    display: flex;
+    flex: 1;
+    height: 7rem !important;
+    border-radius: 0.7rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(233, 198, 178);
+    margin: 10px;
+    box-shadow: 5px 5px rgb(202, 127, 127);
+  }
+  
+  .detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+  }
+  
+  .detail img {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .detail h5 {
+    text-shadow: 0.5px 0.5px rgb(165, 165, 226);
+  }
