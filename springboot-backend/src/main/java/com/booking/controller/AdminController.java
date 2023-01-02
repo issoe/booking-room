@@ -1,7 +1,6 @@
 package com.booking.controller;
 
-import com.booking.Request.NewAccountRequest;
-import com.booking.repository.AdminRepository;
+import com.booking.Request.AccountRequest;
 import com.booking.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +16,7 @@ public class AdminController {
         return adminService.temp();
     }
     @PostMapping("/admin")
-    public ResponseEntity<?> newAccoutAdmin(@RequestBody NewAccountRequest newAcc){
-        return adminService.newAccountAdmin(newAcc);
+    public ResponseEntity<?> checkLogin(@RequestBody AccountRequest account){
+        return adminService.checkLogin(account);
     }
 }
