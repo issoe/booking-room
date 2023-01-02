@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class AdminController {
     @Autowired
     AdminService adminService;
-
+    // link, get, response, request, status
     @GetMapping("/admin")
     public ResponseEntity<?> getAllAdminAccount(){
         return adminService.temp();
