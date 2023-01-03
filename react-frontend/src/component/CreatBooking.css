@@ -20,6 +20,10 @@
     background: #ffffff;
 }
 
+.cost {
+    text-align: center;
+}
+
 .Booking h3 {
     font-size: 20px;
     margin-bottom: 8px;

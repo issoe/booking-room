@@ -1,10 +1,14 @@
 import React from "react";
 import "./RoomCard.css";
+import { useParams, useNavigate} from "react-router-dom";
 
 function RoomCard(props) {
-    
+    const navigate = useNavigate();
     return (
-        <div className="CompactRoomCard" layoutId="expandableCard" onClick={()=>{}}>
+        <div 
+        className="CompactRoomCard" 
+        layoutId="expandableCard" 
+        onClick={() => navigate('/creatbooking')}>
             <div className="infor">
                 <img src={props.png} className = 'rounded'/>
                 <div >

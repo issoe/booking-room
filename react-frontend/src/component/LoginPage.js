@@ -45,7 +45,7 @@ function LoginPage() {
                 className="btn btn-success w-100" 
                 type="submit" 
                 value="SIGN IN" 
-                onClick={() => {navigate('/creatbooking');}}/>
+                onClick={() => {navigate('/AdminPage');}}/>
             
         </form>
         </div>
