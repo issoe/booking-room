@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.RegisterPage {
+    height: 300vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background: #b8e4e6;
+}
+
+.register {
+    width: 700px;
+    height: min-content;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.register h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.register form {
+    font-size: 20px;
+}
+
+.register form .form-group {
+    margin-bottom: 12px;
+}
+
+.register form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}

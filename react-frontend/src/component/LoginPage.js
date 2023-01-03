@@ -5,8 +5,7 @@ import {useNavigate} from 'react-router-dom';
 function LoginPage() {
     const [adminAcount, setAdmin] = useState([]);
     const navigate = useNavigate();
-<<<<<<< HEAD
-=======
+
 
     // useEffect(() => {
     //     const getAdmin = async () => {
@@ -16,8 +15,7 @@ function LoginPage() {
     //     }
     //     getAdmin();
     // }, []);
->>>>>>> 7be2de9f2fe350335bb8634c88e9e4be747c8ab7
-    
+
     return (
         <div className='LoginPage'>
         <div className="login">
