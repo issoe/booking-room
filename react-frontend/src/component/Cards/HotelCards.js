@@ -4,9 +4,9 @@ import "./HotelCards.css";
 import HotelCard from "../Card/HotelCard";
 
 function HotelCards() {
-    return ( 
-        <div className="HotelCards">
-        {HotelsData.map((card, id) => {
+  return (
+    <div className="HotelCards">
+      {HotelsData.map((card) => {
         return (
           <div className="parentContainer" >
             <HotelCard
@@ -16,11 +16,12 @@ function HotelCards() {
               price={card.price}
               hid={card.id}
             />
+            {console.log(card)}
           </div>
         );
-        })}
-        </div>
-     );
+      })}
+    </div>
+  );
 }
 
 export default HotelCards;
