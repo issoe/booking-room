@@ -18,7 +18,7 @@ function CreatBooking({}) {
             <div className='CreatBooking'>
             <div className='Booking'>
                 <form className='mb-3 '>
-                    <h3>Destination:</h3>
+                    {/* <h3>Destination:</h3>
                     <input 
                         className="form-control" 
                         list='city' 
@@ -32,7 +32,7 @@ function CreatBooking({}) {
                         <option value="Hà Nội"/>
                         <option value="Sài Gòn"/>
                         <option value="Đà Nẵng"/>
-                    </datalist>
+                    </datalist> */}
                     
                     <h3>Check-in:</h3>
                     <input  
@@ -50,7 +50,7 @@ function CreatBooking({}) {
                         value={check_out_date}
                         onChange = {(e) => setCout(e.target.value)}
                         />
-                    <h3>How many guest:</h3>
+                    {/* <h3>How many guest:</h3>
                     <input  
                         className="form-control" 
                         type="number" min="1" 
@@ -58,7 +58,7 @@ function CreatBooking({}) {
                         name='guest_amount' 
                         value={guest_amount}
                         onChange = {(e) => setGuestAmount(e.target.value)}
-                        />
+                        /> */}
                     <h3>How many room:</h3>
                     <input  
                         className="form-control" 
@@ -70,11 +70,16 @@ function CreatBooking({}) {
                         onChange = {(e) => setRoomAmount(e.target.value)}
                         />
                     <div className='submit'>
+                    <div className='cost'>                    
+                        <h3>Total cost:</h3>
+                        {}
+                        <span>VND</span>
+                    </div>
                     <button
                         className='btn btn-primary'  
                         onClick={submitClick}
                         >
-                            Search Hotel
+                            submit
                     </button>
                     </div>
                 </form>
