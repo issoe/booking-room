@@ -1,9 +1,9 @@
-.Cards {
+.HotelCards {
     display: flex;
     flex-wrap: wrap;
   }
 
-.parentContainer{
+  .parentContainer{
     list-style: none;
     flex-basis: 33.333333%
   }

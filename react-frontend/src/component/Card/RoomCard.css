@@ -1,0 +1,40 @@
+.CompactRoomCard {
+    display: flex;
+    flex: 1;
+    height: 30rem !important;
+    width: 20rem;
+    border-radius: 0.7rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(233, 216, 178);
+    margin: 10px;
+    box-shadow: 5px 5px rgb(202, 169, 127);
+    transition: box-shadow 0.3s ease-out 100ms
+  }
+  
+.CompactRoomCard:hover {
+  box-shadow: 5px 5px rgb(143, 75, 75);
+}
+
+  .infor {
+    flex: 1;
+    display: list-item;
+    text-align: center;
+    justify-content: space-between;
+    color: rgb(61, 70, 67);
+  }
+  
+  .infor img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .infor h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-shadow: 0.5px 0.5px rgb(165, 165, 226);
+  }

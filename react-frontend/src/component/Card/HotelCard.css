@@ -1,4 +1,4 @@
-.CompactCard {
+.CompactHotelCard {
     display: flex;
     flex: 1;
     height: 7rem !important;
@@ -10,8 +10,13 @@
     background-color: rgb(233, 198, 178);
     margin: 10px;
     box-shadow: 5px 5px rgb(202, 127, 127);
+    transition: box-shadow 0.3s ease-out 100ms
   }
   
+.CompactHotelCard:hover {
+  box-shadow: 5px 5px rgb(143, 75, 75);
+}
+
   .detail {
     flex: 1;
     display: flex;
@@ -30,5 +35,6 @@
   }
   
   .detail h5 {
-    text-shadow: 0.5px 0.5px rgb(165, 165, 226);
+    text-shadow: 0.5px 0.5px rgb(147, 147, 209);
   }
+
