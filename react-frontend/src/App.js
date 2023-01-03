@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' exact element={<LoginPage/>} /> 
-        <Route path='/creatbooking' exact element={<CreatBooking />} /> 
+        <Route path='/creatbooking/:roominfor' exact element={<CreatBooking />} /> 
         <Route path='/AdminPage' exact element={<AdminPage />} /> 
         <Route path='/HotelsRoom/:hotelID' element={<HotelsRoom />} /> 
       </Routes>
