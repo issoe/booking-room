@@ -5,6 +5,18 @@ import {useNavigate} from 'react-router-dom';
 function LoginPage() {
     const [adminAcount, setAdmin] = useState([]);
     const navigate = useNavigate();
+<<<<<<< HEAD
+=======
+
+    // useEffect(() => {
+    //     const getAdmin = async () => {
+    //         const res = await fetch('http://localhost/php_assignment/user.php');
+    //         const getdata = await res.json();
+    //         setAdmin(getdata);
+    //     }
+    //     getAdmin();
+    // }, []);
+>>>>>>> 7be2de9f2fe350335bb8634c88e9e4be747c8ab7
     
     return (
         <div className='LoginPage'>
