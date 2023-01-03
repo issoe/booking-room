@@ -1,0 +1,12 @@
+.RoomCards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.roomContainer{
+    list-style: none;
+    flex-basis: 50%
+}
+
