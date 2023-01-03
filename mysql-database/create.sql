@@ -1,3 +1,4 @@
+DROP DATABASE bookingroom;
 CREATE DATABASE bookingroom;
 USE bookingroom;
 
@@ -26,8 +27,7 @@ CREATE TABLE IF NOT EXISTS _transport
   _type VARCHAR(255) NOT NULL,
   _phone INT NOT NULL,
   _price_per_day INT NOT NULL,
-  _status INT NOT NULL,
-  _distance INT NOT NULL
+  _status INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS _customer
@@ -36,7 +36,6 @@ CREATE TABLE IF NOT EXISTS _customer
   _fullname VARCHAR(255) NOT NULL,
   _address VARCHAR(255) NOT NULL,
   _point INT DEFAULT 0,
-  _id_number VARCHAR(255) NOT NULL,
   _phone VARCHAR(255) NOT NULL,
   _email VARCHAR(255) NOT NULL, 
   _username VARCHAR(255) NOT NULL,
@@ -88,3 +87,12 @@ CREATE TABLE _belong
   FOREIGN KEY (_order_id) REFERENCES _order(_id),
   FOREIGN KEY (_room_id) REFERENCES _room(_id)
 );
+
+
+INSERT INTO `bookingroom`.`_admin` (`_fullname`, `_username`, `_password`) VALUES ('admin', 'admin', 'admin');
+
+INSERT INTO `bookingroom`.`_customer` (`_fullname`, `_address`, `_point`, `_phone`, `_email`, `_username`, `_password`) VALUES ('Christopher David', '36 Le Duc Tho, My Dinh 2, Nam Tu Liem, Hanoi', '0', '023212312', '001@gmail.com', 'kh001', '1');
+
+INSERT INTO `bookingroom`.`_order` (`_booking_date`, `_number_of_customer`, `_check_in_date`, `_check_out_date`, `_payment_status`, `_customer_id`) VALUES ('2022-06-11', '5', '2022-06-12', '2022-06-13', '0', '1');
+
+INSERT INTO `bookingroom`.`_hotel_owner` (`_name`, `_email`, `_username`, `_password`) VALUES ('David', 'mail@gmail.com', 'owner', 'owner');
