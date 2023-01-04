@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { RoomsData } from '../Data';
 import './RoomCards.css';
 import RoomCard from '../Card/RoomCard';
 import axios from "axios"
@@ -9,7 +8,7 @@ function RoomCards(hotelObject) {
 
     useEffect(() => {
         axios.get('http://localhost:8082/rooms', { params: { "id": 1} })
-            .then((response) => {
+            .then((response) => { //thêm điều kiện chỉ lấy data của room có hotelid = hotel.object.id
                 setRoom(response.data);
             })
             .catch((error) => console.log(error))
@@ -17,7 +16,7 @@ function RoomCards(hotelObject) {
 
     return (
         <div className="RoomCards">
-            {rooms.map((room) => {
+            {rooms.map((room) => { 
                 return (
                     <div className="roomContainer" >
                         <RoomCard
