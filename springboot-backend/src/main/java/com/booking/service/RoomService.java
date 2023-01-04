@@ -1,6 +1,5 @@
 package com.booking.service;
 
-import com.booking.request.IntegerRequest;
 import com.booking.repository.RoomRepository;
 import com.booking.response.RoomItem;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +14,8 @@ public class RoomService {
     @Autowired
     RoomRepository roomRepository;
 
-    public ResponseEntity<?> getAllRoomById(IntegerRequest hotelId){
-        List<Integer> myList = roomRepository.getListRoomFromHotelId(hotelId.getId());
+    public ResponseEntity<?> getAllRoomById(Integer hotelId){
+        List<Integer> myList = roomRepository.getListRoomFromHotelId(hotelId);
         List<RoomItem> rooms = new ArrayList<>();
         for(Integer id : myList){
             RoomItem room = new RoomItem(roomRepository.getReferenceById(id));

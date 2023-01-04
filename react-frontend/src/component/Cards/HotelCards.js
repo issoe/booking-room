@@ -1,26 +1,34 @@
-import React from 'react';
-import { HotelsData } from '../Data';
+import React, { useEffect, useState } from 'react';
 import "./HotelCards.css";
 import HotelCard from "../Card/HotelCard";
+import axios from "axios"
 
 function HotelCards() {
-    return ( 
+    const [cards, setCards] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8082/hotels')
+            .then((response) => { setCards(response.data); })
+            .catch((error) => console.log(error))
+    }, []);
+
+    return (
         <div className="HotelCards">
-        {HotelsData.map((card, id) => {
-        return (
-          <div className="parentContainer" >
-            <HotelCard
-              title={card.title}
-              png={card.png}
-              discr={card.discription}
-              price={card.price}
-              hid={card.id}
-            />
-          </div>
-        );
-        })}
+            {cards.map((card) => {
+                return (
+                    <div className="parentContainer" >
+                        <HotelCard
+                            id={card.id}
+                            name={card.name}
+                            phone={card.phone}
+                            address={card.address}
+                            email={card.email}
+                        />
+                    </div>
+                );
+            })}
         </div>
-     );
+    );
 }
 
 export default HotelCards;

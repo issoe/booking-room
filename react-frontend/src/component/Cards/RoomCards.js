@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { RoomsData } from '../Data';
 import './RoomCards.css';
 import RoomCard from '../Card/RoomCard';
+import axios from "axios"
 
-function RoomCards(param) {
-    return ( 
+function RoomCards({hotelObject}) {
+    const [rooms, setRoom] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8082/rooms', { params: { "id": 1} })
+            .then((response) => {
+                setRoom(response.data);
+            })
+            .catch((error) => console.log(error))
+    }, []);
+
+    return (
         <div className="RoomCards">
-        {RoomsData.map((card, id) => { 
-            if (card.hotelID === param.hid) { // only show room of the choosen hotel
-            return (
-            <div className="roomContainer" >
-                <RoomCard
-                amount={card.roomamount}
-                png={card.png}
-                discr={card.discription}
-                id={card.id}
-                hid={card.hotelID}
-                price={card.price}
-                />
-            </div>
-            );
-            }
-        })}
+            {rooms.map((room, index) => {
+                return (
+                    <div key={index} className="roomContainer" >
+                        <RoomCard
+                            roomNumber={room.roomNumber}
+                            status={room.status}
+                            price={room.price}
+                            description={room.description}
+                        />
+                    </div>
+                );
+            })}
         </div>
-     );
+    );
 }
 
 export default RoomCards;
