@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import './LoginPage.css';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
@@ -9,7 +9,7 @@ export default function LoginPage() {
     const navigate = useNavigate();
 
     const handleSubmit = () => {
-        if (email == '' || password == '') console.log("Account or password is empty")
+        if (email === '' || password === '') console.log("Account or password is empty")
         else {
             const adminAccount = {
                 "username": email,
@@ -17,11 +17,11 @@ export default function LoginPage() {
             }
             axios.post('http://localhost:8082/login', adminAccount)
                 .then(res => {
-                    if (res.status == 200) {
-                        if (res.data == "Admin login successfully") {
+                    if (res.status === 200) {
+                        if (res.data === "Admin login successfully") {
                             console.log("Admin login successfully at REACT")
                             navigate('/AdminPage');
-                        } else if (res.data == "Customer login successfully") {
+                        } else if (res.data === "Customer login successfully") {
                             console.log("Customer login successfully at REACT")
                             navigate('/AdminPage');
                         }
