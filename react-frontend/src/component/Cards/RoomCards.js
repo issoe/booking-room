@@ -4,7 +4,7 @@ import './RoomCards.css';
 import RoomCard from '../Card/RoomCard';
 import axios from "axios"
 
-function RoomCards(hotelObject) {
+function RoomCards({hotelObject}) {
     const [rooms, setRoom] = useState([]);
 
     useEffect(() => {
@@ -17,9 +17,9 @@ function RoomCards(hotelObject) {
 
     return (
         <div className="RoomCards">
-            {rooms.map((room) => {
+            {rooms.map((room, index) => {
                 return (
-                    <div className="roomContainer" >
+                    <div key={index} className="roomContainer" >
                         <RoomCard
                             roomNumber={room.roomNumber}
                             status={room.status}
