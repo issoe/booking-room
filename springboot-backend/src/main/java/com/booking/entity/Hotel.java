@@ -1,5 +1,6 @@
 package com.booking.entity;
 
+import com.booking.request.HotelRequest;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,6 +11,7 @@ import lombok.Setter;
 @Table(name = "_hotel")
 public class Hotel {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "_id", nullable = false)
     private Integer id;
 
@@ -23,13 +25,20 @@ public class Hotel {
     private String phone;
 
     @Column(name = "_email", nullable = false)
-    private String email;
+    private String email;;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "_hotel_owner_id")
-    private HotelOwner hotelOwner;
+    @Column (name = "_hotel_owner_id")
+    private Integer hotelOwnerId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "_admin_id")
-    private Admin admin;
+    @Column(name = "_admin_id")
+    private Integer adminId;
+
+    public Hotel(HotelRequest hotelRequest){
+        this.address = hotelRequest.getAddress();
+        this.name = hotelRequest.getName();
+        this.phone = hotelRequest.getPhone();
+        this.email = hotelRequest.getEmail();
+        this.hotelOwnerId = hotelRequest.getHotelOwnerId();
+        this.adminId = hotelRequest.getAdminId();
+    }
 }
