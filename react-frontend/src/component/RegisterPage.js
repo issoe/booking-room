@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import  './RegisterPage.css';
 import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 function RegisterPage() {
     const navigate = useNavigate();
@@ -23,7 +24,19 @@ function RegisterPage() {
     }
 
     function submit(e) {
-        
+        e.preventDefault();
+        const newAccount = data;
+
+        axios.post('http://localhost:8082/signup', newAccount)
+                .then(res => {
+                    if (res.status === 200) {
+                        if (res.data === "Add new customer successfully") {
+                            console.log("Add new customer successfully at REACT")
+                            navigate('/');
+                        }
+                    }
+                })
+                .catch((error) => console.log(error))
     }
 
     return (
@@ -50,7 +63,7 @@ function RegisterPage() {
                     Please enter your address
                 </div>
                 <label className="form-label" for="cccd">CCCD:</label>
-                <input onChange={(e)=>handle(e)} className="form-control" type="cccd" id="cccd" required />
+                <input /*onChange={(e)=>handle(e)}*/ className="form-control" type="cccd" id="cccd" required />
                 <div className="invalid-feedback">
                     Please enter your cccd 
                 </div>
