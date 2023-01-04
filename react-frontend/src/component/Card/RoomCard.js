@@ -8,7 +8,7 @@ function RoomCard(props) {
         <div 
         className="CompactRoomCard" 
         layoutId="expandableCard" 
-        onClick={() => navigate('/creatbooking')}>
+        onClick={e => navigate('/creatbooking/' + props.price)}>
             <div className="infor">
                 <img src={props.png} className = 'rounded'/>
                 <div >
