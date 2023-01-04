@@ -1,6 +1,7 @@
 import React from "react";
 import "./HotelCard.css";
 import { useNavigate } from "react-router-dom";
+
 function HotelCard(card) {
     const navigate = useNavigate();
 
@@ -8,8 +9,8 @@ function HotelCard(card) {
         <div
             className="CompactHotelCard"
             layoutId="expandableCard"
-            // onClick={e => { navigate('/HotelsRoom/' + card.id) }}
-            onClick={e => console.log(typeof card.id)}
+            onClick={e => { navigate('/HotelsRoom/' + card.id) }}
+            //onClick={e => console.log(typeof card.id)}
         >
             <div className="detail">
                 {/* <img src="img2.jpg" className='rounded' /> */}

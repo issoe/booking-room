@@ -21,6 +21,7 @@ function RoomCards(hotelObject) {
                 return (
                     <div className="roomContainer" >
                         <RoomCard
+                            id={room.id}
                             roomNumber={room.roomNumber}
                             status={room.status}
                             price={room.price}
