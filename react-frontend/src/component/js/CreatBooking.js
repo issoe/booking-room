@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CreatBooking.css';
+import '../css/CreatBooking.css';
 
 function CreatBooking({ }) {
 
@@ -12,7 +12,6 @@ function CreatBooking({ }) {
     const submitClick = () => {
         alert(destination + check_in_date + check_out_date + guest_amount + room_amount);
     }
-
 
     return (
         <div className='CreatBooking'>

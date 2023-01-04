@@ -1,3 +1,10 @@
+/* Main file */
+.background {
+    background-color: aliceblue;
+    height: 100vh;
+}
+
+/* HotelCard.css file */
 .CompactHotelCard {
     display: flex;
     flex: 1;
@@ -11,30 +18,60 @@
     margin: 10px;
     box-shadow: 5px 5px rgb(202, 127, 127);
     transition: box-shadow 0.3s ease-out 100ms
-  }
-  
-.CompactHotelCard:hover {
-  box-shadow: 5px 5px rgb(143, 75, 75);
 }
 
-  .detail {
+.CompactHotelCard:hover {
+    box-shadow: 5px 5px rgb(143, 75, 75);
+}
+
+.detail {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
     color: rgb(255, 255, 255);
-  }
-  
-  .detail img {
+}
+
+.detail img {
     position: absolute;
     left: 10px;
     top: 5px;
     width: 100px;
     height: 100px;
+}
+
+.detail h5 {
+    text-shadow: 0.5px 0.5px rgb(147, 147, 209);
+}
+
+/* HotelCards.css file */
+
+.HotelCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.parentContainer {
+    list-style: none;
+    flex-basis: 33.333333%
+}
+
+
+/* 
+  @media screen and (max-width: 1200px) 
+  {
+    .Cards{
+      flex-direction: column;
+    }
+    .parentContainer{
+      height: 9rem;
+    }
   }
   
-  .detail h5 {
-    text-shadow: 0.5px 0.5px rgb(147, 147, 209);
-  }
-
+  @media screen and (max-width: 768px)
+  {
+    .Cards{
+      width: 90%;
+    }
+  } */

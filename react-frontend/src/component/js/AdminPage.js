@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import HotelCards from './Cards/HotelCards';
-import './AdminPage.css';
+import {useNavigate } from "react-router-dom";
 import axios from "axios"
-import { Link, useNavigate } from "react-router-dom";
+
+import '../css/AdminPage.css';
 
 function AdminPage() {
     const [cards, setCards] = useState([]);
@@ -17,20 +17,19 @@ function AdminPage() {
     return (
         <div className='background' >
             <h2 className='text-center display-2'>Hotels:</h2>
-
+            {console.log(cards)}
             <div className="HotelCards">
                 {cards.map((card, index) => {
                     return (
                         <div key={index} className="parentContainer">
-                            <div className="CompactHotelCard" onClick={e => { navigate('/HotelsRoom/' + card.id) }}>
-                                {/* <img src="img2.jpg" className='rounded' /> */}
-                                <div>
+                            <div className="CompactHotelCard"
+                                onClick={e => { navigate('/HotelsRoom/' + card.id) }}>
+                                <img src="./img/img.jpg" className='rounded' />
+                                <div className="detail">
                                     <h5>{card.name}</h5>
-                                    <span>Tel: {card.phone}</span>
-                                    <br></br>
-                                    <span>Email: {card.email}</span>
-                                    <br></br>
-                                    <span>Address: {card.address}</span>
+                                    <p>Tel: {card.phone}</p>
+                                    <p>Email: {card.email}</p>
+                                    <p>Address: {card.address}</p>
                                 </div>
                             </div>
                         </div>
