@@ -1,6 +1,5 @@
 package com.booking.service;
 
-import com.booking.request.IntegerRequest;
 import com.booking.repository.RoomRepository;
 import com.booking.response.RoomItem;
 import org.springframework.beans.factory.annotation.Autowired;
