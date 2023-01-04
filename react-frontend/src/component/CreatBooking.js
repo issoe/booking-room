@@ -1,18 +1,29 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './CreatBooking.css';
 
-function CreatBooking({}) {
+function CreatBooking() {
     
     const [destination, setDes] = useState('');
     const [check_in_date, setCin] = useState();
     const [check_out_date, setCout] = useState('');
     const [guest_amount, setGuestAmount] = useState(0);
     const [room_amount, setRoomAmount] = useState(0);
+    const [price, setPrice] = useState(0); 
+    const {roominfor} = useParams();
 
     const submitClick = () => {
         alert(destination + check_in_date + check_out_date + guest_amount + room_amount);
     }
     
+    function CaculatePrice() {
+        const d1 = new Date(check_in_date);
+        const d2 = new Date(check_out_date);
+        const dif = Math.abs(d2 - d1);
+        const days = Math.ceil(dif / (1000 * 60 * 60 * 24));
+        const res = days * roominfor * room_amount;
+        return(res);
+    }
 
         return (
             <div className='CreatBooking'>
@@ -72,7 +83,9 @@ function CreatBooking({}) {
                     <div className='submit'>
                     <div className='cost'>                    
                         <h3>Total cost:</h3>
-                        {}
+                        <div className='display-4'>
+                            {CaculatePrice()}
+                        </div>
                         <span>VND</span>
                     </div>
                     <button
