@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './CreatBooking.css';
 
 function CreatBooking() {
-    
+    const navigate = useNavigate();
     const [destination, setDes] = useState('');
     const [check_in_date, setCin] = useState();
     const [check_out_date, setCout] = useState('');
@@ -14,6 +14,7 @@ function CreatBooking() {
 
     const submitClick = () => {
         alert(destination + check_in_date + check_out_date + guest_amount + room_amount);
+        navigate('/successPage');
     }
     
     function CaculatePrice() {

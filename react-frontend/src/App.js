@@ -5,6 +5,7 @@ import AdminPage from './component/AdminPage';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HotelsRoom from './component/HotelsRoom';
 import RegisterPage from './component/RegisterPage';
+import SuccessPage from './component/SuccessPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/AdminPage' exact element={<AdminPage />} /> 
         <Route path='/HotelsRoom/:hotelID' element={<HotelsRoom />} /> 
         <Route path='/RegisterPage' exact element={<RegisterPage />} /> 
+        <Route path='/SuccessPage' exact element={<SuccessPage />} /> 
       </Routes>
     </Router>
   );
