@@ -2,7 +2,6 @@ package com.booking.service;
 
 import com.booking.repository.CustomerRepository;
 import com.booking.repository.HotelOwnerRepository;
-import com.booking.repository.HotelRepository;
 import com.booking.request.AccountRequest;
 import com.booking.repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
