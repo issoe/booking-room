@@ -10,14 +10,14 @@ function RoomCard(props) {
             layoutId="expandableCard"
             onClick={() => navigate('/creatbooking')}>
             <div className="infor">
-                <img src="/static/media/room3.dbc73418bb6f3f06e3c5.jpg" className='rounded' />
+                <img src="./img2.jpg" className='rounded' />
                 <div >
                     <h5>Room number: {props.roomNumber}</h5>
-                    <span>Room number: {props.status}</span>
+                    <span>Status: {props.status}</span>
                     <br></br>
-                    <span>Room number: {props.price}</span>
+                    <span>Price: {props.price}</span>
                     <br></br>
-                    <span>Room number: {props.description}</span>
+                    <span>Description: {props.description}</span>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ function HotelCard(card) {
 
     return (
 
-        <Link to={`/HotelsRoom/${card.id}`} >
+        // <Link to={`/HotelsRoom/${card.id}`} >
             <div
                 className="CompactHotelCard"
                 layoutId="expandableCard"
@@ -26,7 +26,7 @@ function HotelCard(card) {
                     </div>
                 </div>
             </div>
-        </Link >
+        // </Link >
     );
 }
 

@@ -14,9 +14,9 @@ function HotelCards() {
 
     return (
         <div className="HotelCards">
-            {cards.map((card) => {
+            {cards.map((card, index) => {
                 return (
-                    <div className="parentContainer" >
+                    <div key={index} className="parentContainer" >
                         <HotelCard
                             id={card.id}
                             name={card.name}
