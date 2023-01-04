@@ -8,7 +8,7 @@ function RoomCards(hotelObject) {
 
     useEffect(() => {
         axios.get('http://localhost:8082/rooms', { params: { "id": 1} })
-            .then((response) => { //thêm điều kiện chỉ lấy data của room có hotelid = hotel.object.id
+            .then((response) => { 
                 setRoom(response.data);
             })
             .catch((error) => console.log(error))
