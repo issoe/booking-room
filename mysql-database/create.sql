@@ -107,3 +107,7 @@ INSERT INTO `bookingroom`.`_hotel` (`_address`, `_name`, `_phone`, `_email`, `_h
 INSERT INTO `bookingroom`.`_hotel` (`_address`, `_name`, `_phone`, `_email`, `_hotel_owner_id`, `_admin_id`) VALUES ('Binh An village, Trung Gia commune, Soc Son district, Hanoi\n', 'Binh An 1 Hotel	', '0123457', 'BA1@mail.com', '1', '1');
 INSERT INTO `bookingroom`.`_hotel` (`_address`, `_name`, `_phone`, `_email`, `_hotel_owner_id`, `_admin_id`) VALUES ('HH01, To Huu, Ha Dong, Hanoi\n', 'Whyndham Garden Hanoi Hotel	', '0123458', 'Why@mail.com', '1', '1');
 INSERT INTO `bookingroom`.`_hotel` (`_address`, `_name`, `_phone`, `_email`, `_hotel_owner_id`, `_admin_id`) VALUES ('23 Ngoc Khanh, Giang Vo, Ba Dinh, Hanoi\n23 Ngoc Khanh, Giang Vo, Ba Dinh, Hanoi\n23 Ngoc Khanh, Giang Vo, Ba Dinh, Hanoi\n23 Ngoc Khanh, Giang Vo, Ba Dinh, Hanoi\n23 Ngoc Khanh, Giang Vo, Ba Dinh, Hanoi\n', 'Lake Side Hotel	', '0123459', 'Lake@mail.com', '1', '1');
+
+INSERT INTO `bookingroom`.`_room` (`_room_number`, `_status`, `_price`, `_description`, `_hotel_id`) VALUES ('R001', 'Available', '100', 'Description...', '1');
+INSERT INTO `bookingroom`.`_room` (`_room_number`, `_status`, `_price`, `_description`, `_hotel_id`) VALUES ('R002', 'Available', '200', 'Description...', '1');
+INSERT INTO `bookingroom`.`_room` (`_room_number`, `_status`, `_price`, `_description`, `_hotel_id`) VALUES ('R003', 'Available', '300', 'Description...', '1');
