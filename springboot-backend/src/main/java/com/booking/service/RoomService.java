@@ -15,8 +15,8 @@ public class RoomService {
     @Autowired
     RoomRepository roomRepository;
 
-    public ResponseEntity<?> getAllRoomById(IntegerRequest hotelId){
-        List<Integer> myList = roomRepository.getListRoomFromHotelId(hotelId.getId());
+    public ResponseEntity<?> getAllRoomById(Integer hotelId){
+        List<Integer> myList = roomRepository.getListRoomFromHotelId(hotelId);
         List<RoomItem> rooms = new ArrayList<>();
         for(Integer id : myList){
             RoomItem room = new RoomItem(roomRepository.getReferenceById(id));
