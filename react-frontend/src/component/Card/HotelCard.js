@@ -1,20 +1,25 @@
 import React from "react";
 import "./HotelCard.css";
-import { useParams, useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function HotelCard(props) {
+function HotelCard(card) {
     const navigate = useNavigate();
     return (
-        <div 
-        className="CompactHotelCard" 
-        layoutId="expandableCard" 
-        hotelID={props.hid}
-        onClick={e=>{navigate('/HotelsRoom/' + props.hid)}}>
+        <div
+            className="CompactHotelCard"
+            layoutId="expandableCard"
+            // onClick={e => { navigate('/HotelsRoom/' + card.id) }}
+            onClick={e => console.log(typeof card.id)}
+        >
             <div className="detail">
-                <img src={props.png} className = 'rounded'/>
+                {/* <img src="img2.jpg" className='rounded' /> */}
                 <div>
-                    <h5>{props.title}</h5>
-                    <span>{props.discr}</span>
+                    <h5>{card.name}</h5>
+                    <span>Tel: {card.phone}</span>
+                    <br></br>
+                    <span>Email: {card.email}</span>
+                    <br></br>
+                    <span>Address: {card.address}</span>
                 </div>
             </div>
         </div>
