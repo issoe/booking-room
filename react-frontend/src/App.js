@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HotelsRoom from './component/HotelsRoom';
 import RegisterPage from './component/RegisterPage';
 import SuccessPage from './component/SuccessPage';
+import AddHotelForm from './component/AddHotelForm';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/HotelsRoom/:hotelID' element={<HotelsRoom />} /> 
         <Route path='/RegisterPage' exact element={<RegisterPage />} /> 
         <Route path='/SuccessPage' exact element={<SuccessPage />} /> 
+        <Route path='/AddHotelForm' exact element={<AddHotelForm />} /> 
       </Routes>
     </Router>
   );

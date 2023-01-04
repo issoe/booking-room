@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.AddHotelForm {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d3e6e7;
+}
+
+.HotelsInfor {
+    width: 500px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.HotelsInfor h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+}
+
+.HotelsInfor .submit{
+    text-align: right;
+    margin-top: 12px;
+}
