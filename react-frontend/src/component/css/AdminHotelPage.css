@@ -1,7 +1,7 @@
 /* Main file */
 .background {
   background-color: aliceblue;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* HotelCard.css file */
@@ -70,7 +70,7 @@
   border-radius: 12px;
   background: #ffffff;
   position: relative;
-
+  display: none;
 }
 
 /* 
