@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 
 import '../css/AdminRoomPage.css';
 
-export default function AdminRoomPage() {
+export default function CusRoomPage() {
     const navigate = useNavigate();
     const [rooms, setRoom] = useState([]);
     const { hotelID } = useParams();

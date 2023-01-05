@@ -23,7 +23,8 @@ export default function OwnerHotelPage() {
                         <div key={index} className="parentContainer">
                             <div className="CompactHotelCard"
                                 onClick={e => { navigate('/AdminRoomPage/' + card.id) }}>
-                                <img src="./img/img.jpg" className='rounded' />
+                                {/* <img src="./img/img.jpg" className='rounded' /> */}
+                                <img src="http://bob.codegym.vn/assets/images/Codegym-bob-RIGHTxWH200.png" className='rounded'></img>
                                 <div className="detail">
                                     <h5>{card.name}</h5>
                                     <p>Tel: {card.phone}</p>

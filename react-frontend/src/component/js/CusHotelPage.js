@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 // import '../css/AdminHotelPage.css';
 
-function AdminHotelPage() {
+export default function CusHotelPage() {
     const [cards, setCards] = useState([]);
 
     const [name, setName] = useState('');
@@ -123,5 +123,3 @@ function AdminHotelPage() {
         </div>
     );
 }
-
-export default AdminHotelPage;
