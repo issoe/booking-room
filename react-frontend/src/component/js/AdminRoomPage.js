@@ -11,6 +11,48 @@ export default function AdminRoomPage() {
     const navigate = useNavigate();
     const [rooms, setRoom] = useState([]);
     const { hotelID } = useParams();
+    const [roomNumber, setRoomNumber] = useState('');
+    const [theStatus, setStatus] = useState('');
+    const [price, setPrice] = useState('');
+    const [description, setDescription] = useState('');
+    const [myStatus, setMyStatus] = useState(true);
+
+    const addNewRoom = () => {
+        const form = document.getElementsByClassName('newRoom');
+        // console.log(form[])
+
+        if (myStatus == true) {
+            form[0].style.display = 'block';
+            setMyStatus(false);
+        } else {
+            form[0].style.display = 'none';
+            setMyStatus(true);
+        }
+    }
+
+    const handleSubmit = () => {
+        if (roomNumber === '' || theStatus === '' || price === '' || description === '')
+            console.log("4 fields must be filled")
+        else {
+            const adminAccount = {
+                "roomNumber": roomNumber,
+                "status": theStatus,
+                "price": price,
+                "description": description,
+                "hotelId": hotelID
+            }
+
+            axios.post('http://localhost:8082/room', adminAccount)
+                .then(res => {
+                    if (res.status === 200) {
+                        // console.log("Add new room successfully by admin")
+                        const form = document.getElementsByClassName('newRoom');
+                        form[0].style.display = 'none';
+                    }
+                })
+                .catch((error) => console.log(error))
+        }
+    }
 
     const [roomNumber, setRoomNumber] = useState('');
     const [theStatus, setStatus] = useState('');
@@ -55,8 +97,12 @@ export default function AdminRoomPage() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
+<<<<<<< HEAD
                             <Nav.Link href="#">New room</Nav.Link>
                             <Nav.Link href="#">Remove room</Nav.Link>
+=======
+                            <Nav.Link href="#" onClick={addNewRoom}>New room</Nav.Link>
+>>>>>>> 7700f56a
                         </Nav>
                         <Nav>
                             <Nav.Link href="/" >Log out</Nav.Link>

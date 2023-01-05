@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios, { formToJSON } from "axios"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -14,6 +14,7 @@ function AdminHotelPage() {
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
+    const [myStatus, setMyStatus] = useState(true);
     const navigate = useNavigate();
 
     const handleSubmit = () => {
@@ -32,10 +33,25 @@ function AdminHotelPage() {
             axios.post('http://localhost:8082/hotel', adminAccount)
                 .then(res => {
                     if (res.status === 200) {
-                        console.log("Add new hotel successfully by admin")
+                        const form = document.getElementsByClassName('newHotel');
+                        form[0].style.display = 'none';
+                        // console.log("Add new hotel successfully by admin")
                     }
                 })
                 .catch((error) => console.log(error))
+        }
+    }
+
+    const addNewHotel = () => {
+        const form = document.getElementsByClassName('newHotel');
+        // console.log(form[])
+
+        if (myStatus == true) {
+            form[0].style.display = 'block';
+            setMyStatus(false);
+        } else {
+            form[0].style.display = 'none';
+            setMyStatus(true);
         }
     }
 
@@ -53,8 +69,7 @@ function AdminHotelPage() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#">New hotel</Nav.Link>
-                            <Nav.Link href="#">Remove hotel</Nav.Link>
+                            <Nav.Link href="#" onClick={addNewHotel}>New hotel</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link href="/" >Log out</Nav.Link>
@@ -81,7 +96,7 @@ function AdminHotelPage() {
                         onChange={(e) => { setAddress(e.target.value) }}
                         placeholder='Address' required />
 
-                    <button className='btn btn-primary' onClick={handleSubmit}>Create</button>
+                    <button className='btn btn-primary' onClick={handleSubmit}>New Hotel</button>
                 </form>
             </div>
             {/* <h2 className='text-center display-2'>Hotels - Admin page</h2> */}
@@ -92,6 +107,7 @@ function AdminHotelPage() {
                             <div className="CompactHotelCard"
                                 onClick={e => { navigate('/AdminRoomPage/' + card.id) }}>
                                 {/* <img src='../img/img.png' className='rounded' /> */}
+
                                 <img src="http://bob.codegym.vn/assets/images/Codegym-bob-RIGHTxWH200.png" className='rounded'></img>
                                 <div className="detail">
                                     <h6>{card.name}</h6>

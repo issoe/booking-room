@@ -28,6 +28,7 @@
 
 .CompactRoomCard:hover {
   box-shadow: 5px 5px rgb(143, 75, 75);
+  background-color: rgba(233, 198, 178, 0.5);
 }
 
 .infor {
@@ -49,4 +50,36 @@
   margin-top: 5px;
   margin-bottom: 5px;
   text-shadow: 0.5px 0.5px rgb(165, 165, 226);
+}
+
+<<<<<<< HEAD
+.infor {
+  flex: 1;
+  display: list-item;
+  text-align: center;
+  justify-content: space-between;
+  color: rgb(61, 70, 67);
+}
+
+.infor img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 200px;
+  height: 200px;
+}
+
+.infor h5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-shadow: 0.5px 0.5px rgb(165, 165, 226);
+=======
+.newRoom {
+  width: 500px;
+  height: min-content;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  position: relative;
+  display: none;
+>>>>>>> 7700f56a
 }
