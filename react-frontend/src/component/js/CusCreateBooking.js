@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import '../css/CreatBooking.css';
+import '../css/CusCreateBooking.css';
 
-function CreatBooking({ }) {
-
+export default function CusCreateBooking() {
     const [destination, setDes] = useState('');
     const [check_in_date, setCin] = useState();
     const [check_out_date, setCout] = useState('');
@@ -86,6 +85,3 @@ function CreatBooking({ }) {
         </div>
     )
 }
-
-
-export default CreatBooking;

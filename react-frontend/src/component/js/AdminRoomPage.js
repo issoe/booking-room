@@ -1,12 +1,11 @@
 // import RoomCards from '../Cards/RoomCards';
 import React, { useEffect, useState } from 'react';
-import '../css/RoomCards.css';
-import '../css/AdminPage.css';
+import '../css/AdminRoomPage.css';
 
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios"
 
-export default function HotelsRoom() {
+export default function AdminRoomPage() {
     const navigate = useNavigate();
     const [rooms, setRoom] = useState([]);
     const { hotelID } = useParams();
@@ -29,7 +28,7 @@ export default function HotelsRoom() {
                             <div
                                 className="CompactRoomCard"
                                 layoutId="expandableCard"
-                                onClick={() => navigate('/creatbooking')}>
+                                onClick={() => navigate('/CusCreateBooking')}>
                                 <div className="infor">
                                     <img src="../img/img.jpg" className='rounded' />
                                     <div >

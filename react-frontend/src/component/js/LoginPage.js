@@ -20,14 +20,14 @@ export default function LoginPage() {
                     if (res.status === 200) {
                         if (res.data === "Admin login successfully") {
                             console.log("Admin login successfully at REACT")
-                            navigate('/AdminPage');
+                            navigate('/AdminHotelPage');
                         } else if (res.data === "Customer login successfully") {
                             console.log("Customer login successfully at REACT")
-                            navigate('/AdminPage');
+                            navigate('/CusHotelPage');
                         }
                         else {
                             console.log("HotelOwner login successfully at REACT")
-                            navigate('/AdminPage');
+                            navigate('/OwnerHotelPage');
                         }
                     }
 
