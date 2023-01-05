@@ -1,6 +1,8 @@
 package com.booking.service;
 
+import com.booking.entity.Room;
 import com.booking.repository.RoomRepository;
+import com.booking.request.RoomRequest;
 import com.booking.response.RoomItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,5 +24,16 @@ public class RoomService {
             rooms.add(room);
         }
         return ResponseEntity.ok(rooms);
+    }
+
+    public ResponseEntity<?> addNewRoom(RoomRequest roomRequest){
+        try {
+            Room room = new Room(roomRequest);
+            roomRepository.save(room);
+            return ResponseEntity.ok("Add new room successfully");
+        } catch (Exception e){
+            System.out.println(e);
+            return ResponseEntity.badRequest().body("Cant add new room");
+        }
     }
 }

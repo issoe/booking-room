@@ -19,8 +19,6 @@ export default function AdminRoomPage() {
 
     const addNewRoom = () => {
         const form = document.getElementsByClassName('newRoom');
-        // console.log(form[])
-
         if (myStatus == true) {
             form[0].style.display = 'block';
             setMyStatus(false);
@@ -45,9 +43,9 @@ export default function AdminRoomPage() {
             axios.post('http://localhost:8082/room', adminAccount)
                 .then(res => {
                     if (res.status === 200) {
-                        // console.log("Add new room successfully by admin")
-                        const form = document.getElementsByClassName('newRoom');
-                        form[0].style.display = 'none';
+                        console.log("Add new room successfully by admin")
+                        // const form = document.getElementsByClassName('newRoom');
+                        // form[0].style.display = 'none';
                     }
                 })
                 .catch((error) => console.log(error))

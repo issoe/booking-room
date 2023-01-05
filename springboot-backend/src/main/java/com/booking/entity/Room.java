@@ -1,5 +1,6 @@
 package com.booking.entity;
 
+import com.booking.request.RoomRequest;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,7 +27,14 @@ public class Room {
     @Column(name = "_description", nullable = false)
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "_hotel_id", nullable = false)
-    private Hotel hotel;
+    @Column(name = "_hotel_id", nullable = false)
+    private Integer hotelId;
+
+    public Room(RoomRequest room){
+        this.roomNumber = room.getRoomNumber();
+        this.status = room.getStatus();
+        this.price = room.getPrice();
+        this.description = room.getDescription();
+        this.hotelId = room.getHotelId();
+    }
 }

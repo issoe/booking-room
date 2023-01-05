@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Integer> {
-    @Query("SELECT r.id FROM Room r WHERE r.hotel.id = ?1")
+    @Query("SELECT r.id FROM Room r WHERE r.hotelId = ?1")
     List<Integer> getListRoomFromHotelId(Integer hotelId);
 }
