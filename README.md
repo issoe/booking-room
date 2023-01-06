@@ -8,6 +8,8 @@ Web app for booking room
       ```
 2. Backend (Springboot)
       ```
+      mvn compile
+      mvn clean install
       mvn spring-boot:run
       ```      
 3. Frontend (React)
