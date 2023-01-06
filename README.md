@@ -16,4 +16,5 @@ Web app for booking room
       ```
       npm install
       npm start
+      npm install axios
       ```
